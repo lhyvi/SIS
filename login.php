@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 // Predefined credentials
 $predefinedUsername = "admin";
 $predefinedPassword = "password";
