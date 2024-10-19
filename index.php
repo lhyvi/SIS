@@ -1,10 +1,9 @@
 <?php
 session_start();
 
-
 if (isset($_SESSION['uname'])) {
-	header('Location: sis.php');
-	exit();
+    header('Location: sis.php');
+    exit();
 }
 ?>
 
@@ -14,19 +13,23 @@ if (isset($_SESSION['uname'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
+    <h1 id="sis-title">SIS</h1>
     <div class="container">
-        <div class="left-panel">
-            <h1>The <br><span class="green">S</span><br><span class="red">I</span><br>S</h1>
-            <p>Welcome to the SIS.</p>
-        </div>
-        <div class="right-panel">
+        <div class="panel">
             <h2>User Login</h2>
             <form action="login.php" method="post" class="indexform">
-                <input type="text" name="uname" placeholder="User Name" required>
-                <input type="password" name="pass" placeholder="Password" required>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="uname" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="pass" placeholder="Password" required>
+                </div>
                 <button type="submit">Login</button>
                 <?php
                     if (isset($_GET['error'])) {
