@@ -15,9 +15,10 @@ if (!isset($_SESSION['uname'])) {
     <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
     <title>SIS</title>
     <link rel="stylesheet" type="text/css" href="CSS/higherlower.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+	<div class="container">
 	<h1>Student Information</h1>
 	<img src="Nagamany.png" width=100>
 	<table style="border: 2px solid">
@@ -50,8 +51,10 @@ if (!isset($_SESSION['uname'])) {
 			<td>Silica Valley, Western Calofirna</td>
 		</tr>
 	</table>
-	
+	</div>
+	<div class="container2">
 	<h2> Academic Information</h2>
+	<div class="table">
 	<table style="border: 2px solid">
 		<tr>
 			<td>Program</td>
@@ -70,8 +73,10 @@ if (!isset($_SESSION['uname'])) {
 			<td>January 01, 0001</td>
 		</tr>
 	</table>
+	</div>
 	<form action="logout.php">
-		<input type="submit" value="Logout" class="logout" />
+		<input type="submit" value="Logout" class="btn" />
 	</form>
+	</div>
 </body>
 </html>
